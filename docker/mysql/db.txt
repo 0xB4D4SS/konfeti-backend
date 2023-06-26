@@ -1,0 +1,16 @@
+create table products (
+    id int auto_increment,
+    name varchar(255) null,
+    description text null,
+    cost int not null default 0,
+    primary key (id)
+);
+
+create table orders (
+    id int auto_increment,
+    customer_name varchar(255),
+    customer_email varchar(255),
+    products json null,
+    total_cost int not null default 0,
+    primary key (id)
+);
